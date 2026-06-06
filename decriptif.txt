@@ -1,0 +1,9 @@
+Projet 1 
+- objectif : créer un page qui recherche la météo depuis un site et l'affiche sur une page internet en local 
+Projet 2
+- objectif : mettre en place un systeme de repetition espacé me permettant d'apprendre des nouveau mots de vocabulaire dans une langue a partir d'une liste que j'aimerais pouvoir compléter sur plusieur appareil (ordinateur, telephone tablette) et afficher sur la page internet les questions pour réviser les mots
+Projet 3
+- objectif : ajouter un bouton me permettant d'ecouter la prononciation du mot.
+Projet 4
+- objectif : rediriger ma liste de tache et mon emploi du temps sur la page
+Projet 5 : ajouter une ia qui me permet rappel le matin ce que j'ai a faire, les échéances importantes et m'aide a reviser les mots de vocabulaire. 
