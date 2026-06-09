@@ -1,0 +1,34 @@
+
+
+titre       Ici sera entreposer l'ensemble des objectifs
+
+
+Objectif 1 :
+    - idée principal (clair et rapide):
+        création et tirage des information d'un emploit du temps
+
+    - explication complète
+        1) création d'une base de données (SQL) qui stockera les données événement (id / date / heure / description / delat)
+	2) grace à cette base de donnée l'assistant devra 
+            => me dire ce qu'il me reste à faire dans ma journée
+            => me dire ce qui est prévu sur une journée préalablement demandée
+            => ajouter des événements à la base de donnée 
+	    => supprimer les évènement périmés qui serons autoriser à être supprimer (la variable delat sert à ceci (1 ou 0)
+
+
+
+objectif 2 :
+    - idée principal (clair et rapide):
+        
+
+    - explication complète
+        
+
+
+
+objectif 3 : 
+    - idée principal (clair et rapide):
+        
+
+    - explication complète
+        
