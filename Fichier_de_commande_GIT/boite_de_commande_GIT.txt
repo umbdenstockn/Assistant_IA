@@ -1,0 +1,11 @@
+
+
+## ici sera stocker l'ensemble des fonction utile à Git et GitHub
+
+
+git pull  => recevoir l'ensemble des modifications réaliser en mon absence
+
+
+git add .  			=> ajoute tous les fichier nouveaux ou modifier (le point peut être remplacer par fichier.__ pour ajouter seulement un fichier
+git commit -m "message"  	=> création d'un nouveau commit dans GitHub avec un message explicatif
+git push  			=> envoie le travail sur GitHub
