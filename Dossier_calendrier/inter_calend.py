@@ -12,7 +12,7 @@ import datetime as dt
 
 def ajouter_evenement(date, heure, description, delate=1):
     # 1. Connexion à la base
-    connexion = sql.connect("calendrier.db")
+    connexion = sql.connect("calendrier_base_de_donnee_NE_PAS_TOUCHER.db")
     curseur = connexion.cursor()
 
     # 2. Insertion d'un événement
@@ -30,11 +30,11 @@ def ajouter_evenement(date, heure, description, delate=1):
 
 def trier_evenements():
     # 1. Connexion à la base
-    connexion = sql.connect("calendrier.db")
+    connexion = sql.connect("calendrier_base_de_donnee_NE_PAS_TOUCHER.db")
     curseur = connexion.cursor()
 
     # 2. Récupération et tri des événements
-    curseur.execute("SELECT * FROM evenements ORDER BY date ASC, heure ASC")
+    curseur.execute("SELECT * FROM evenements ORDER BY date DESC, heure DESC")
     evenements_tries = curseur.fetchall()
 
     # 3. Fermeture
@@ -48,7 +48,7 @@ def trier_evenements():
 
 def supprimer_evenements_passés():
     # 1. Connexion à la base
-    connexion = sql.connect("calendrier.db")
+    connexion = sql.connect("calendrier_base_de_donnee_NE_PAS_TOUCHER.db")
     curseur = connexion.cursor()
 
     # 2. Suppression des événements passés
@@ -62,6 +62,19 @@ def supprimer_evenements_passés():
     # 4. Fermeture
     connexion.close()
 
+def supprimer_evenement_par_id(id_evenement):
+    # 1. Connexion à la base
+    connexion = sql.connect("calendrier_base_de_donnee_NE_PAS_TOUCHER.db")
+    curseur = connexion.cursor()
+
+    # 2. Suppression de l'événement par ID
+    curseur.execute("DELETE FROM evenements WHERE id = ?", (id_evenement,))
+
+    # 3. Sauvegarde
+    connexion.commit()
+
+    # 4. Fermeture
+    connexion.close()
 
 
 
