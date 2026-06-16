@@ -34,13 +34,15 @@ def trier_evenements():
     curseur = connexion.cursor()
 
     # 2. Récupération et tri des événements
-    curseur.execute("SELECT * FROM evenements ORDER BY date DESC, heure DESC")
+    curseur.execute("SELECT * FROM evenements  WHERE date >= ? ORDER BY date ASC, heure ASC", (dt.date.today().isoformat(),))
     evenements_tries = curseur.fetchall()
+    curseur.execute("SELECT * FROM evenements WHERE date < ? ORDER BY date DESC, heure DESC", (dt.date.today().isoformat(),))
+    evenements_tries_passe = curseur.fetchall()
 
     # 3. Fermeture
     connexion.close()
 
-    return evenements_tries
+    return evenements_tries,evenements_tries_passe
 
 
 
@@ -61,6 +63,9 @@ def supprimer_evenements_passés():
 
     # 4. Fermeture
     connexion.close()
+
+
+
 
 def supprimer_evenement_par_id(id_evenement):
     # 1. Connexion à la base
